@@ -1,0 +1,145 @@
+h1 {
+    color: wheat;
+}
+
+#score1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 20px;
+    font-weight: bold;
+    background-color: rgb(74, 147, 1);
+    border: 2px solid rgb(74, 147, 1);
+}
+
+#score2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 20px;
+    font-weight: bold;
+    background-color: red;
+    border: 2px solid red;
+}
+
+#container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(222, 232, 136);
+}
+
+.LoadQs {
+    text-align: center;
+    font-size: 22px;
+    font-family: cursive;
+    color: whitesmoke;
+    background-color: rgb(1, 40, 56);
+}
+
+.Answer {
+    text-align: center;
+    background-image: url('java.jpg');
+}
+
+#NextPrev {
+    text-align: center;
+}
+
+#qnNo {
+    font-weight: bold;
+}
+
+#nxt {
+    padding: 5px;
+    width: 100px;
+    background-color: rgb(198, 4, 4);
+    color: white;
+    font-size: 18px;
+    border: 2px solid rgb(198, 4, 4);
+    margin-top: 2px;
+}
+
+#next {
+    padding: 5px;
+    width: 100px;
+    background-color: rgb(48, 94, 2);
+    color: white;
+    font-size: 18px;
+    border: 2px solid rgb(48, 94, 2);
+    margin-top: 2px;
+}
+
+#picButton {
+    width: 140px;
+    padding: 4px;
+    font-weight: bold;
+    color: rgb(32, 2, 88);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid white;
+    margin-top: 5px;
+}
+
+#dashbod {
+    float: right;
+    color: rgb(68, 69, 68);
+}
+
+#picButton:hover {
+    background-color: rgb(112, 122, 87);
+    border: 2px solid rgb(112, 122, 87);
+}
+
+input {
+    width: 50px;
+}
+
+#Attempt_Again {
+    background-color: rgb(222, 128, 61);
+    color: white;
+    border: 2px solid rgb(222, 128, 61);
+}
+
+#Generate_Message {
+    background-color: rgb(64, 140, 142);
+    color: white;
+    border: 2px solid rgb(64, 140, 142);
+    font-weight: bold;
+}
+
+#ms {
+    color: rgb(29, 14, 17);
+    font-family: fantasy;
+}
+
+#time {
+    margin-left: 0px;
+    color: rgb(32, 34, 34);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#qsdeatils {
+    color: rgb(255, 255, 255);
+    background-color: rgb(203, 55, 55);
+    font-weight: bold;
+    font-family: cursive
+}
+
+#todayQS {
+    background-color: rgb(13, 2, 50);
+    color: rgb(241, 214, 214);
+}
+
+#btnQS {
+    margin-top: 10px;
+    background-color: crimson;
+    color: wheat;
+    padding: 4px;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+button:hover::after {
+    background-color: aqua;
+    transition: 0s 180s;
+}

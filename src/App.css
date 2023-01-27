@@ -1,0 +1,62 @@
+:link {
+    text-decoration: none;
+}
+
+#HomeLink {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#HelpLink {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#AboutLink {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#HomeLink:hover {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+#AboutLink:hover {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+#HelpLink:hover {
+    font-weight: bold;
+    color: blueviolet;
+}
+
+#basic-nav-dropdown {
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#navBar {
+    background-color: rgb(255, 255, 255);
+    color: white;
+}
+
+#welcomeHead {
+    color: rgb(7, 210, 17);
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#JavaLink {
+    color: rgb(24, 22, 22);
+}
+
+#PythonLink {
+    color: rgb(15, 14, 14);
+}
+
+#JavaScriptLink {
+    color: rgb(26, 25, 25);
+}

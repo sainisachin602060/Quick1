@@ -1,0 +1,46 @@
+#about {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(128, 128, 131);
+}
+
+#aboutHead {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+}
+
+#continer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+img {
+    max-inline-size: 80%;
+    block-size: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 300px;
+}
+
+#me {
+    margin-left: 20px;
+    color: rgb(11, 97, 97);
+    font-family: cursive;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#sign {
+    float: right;
+    margin-right: 25px;
+    color: black;
+}
+
+#mylink {
+    color: rgb(226, 230, 231);
+}
+
+#mydetail {
+    color: blue;
+}

@@ -1,0 +1,21 @@
+.HelpBody {
+    background-color: rgb(44, 45, 44);
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    margin-left: 5px;
+}
+
+p {
+    color: rgb(2, 163, 163);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 15px;
+    color: brown;
+}
+
+#not {
+    color: red;
+}
