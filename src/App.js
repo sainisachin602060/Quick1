@@ -20,7 +20,7 @@ function App() {
   <div >
      
    <div >
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
 
     <Navbar bg="light" expand="lg" id="navBar" >
       <Container  >
@@ -32,14 +32,14 @@ function App() {
           <Nav className="me-auto">
           <Nav.Link href='/'><Link to="/" id='HomeLink'>Home</Link></Nav.Link>
            
-            <NavDropdown title="StartQuiz" id="basic-nav-dropdown">
+            {/* <NavDropdown title="StartQuiz" id="basic-nav-dropdown"> */}
               <NavDropdown.Item ><Link to="/Java"  id='JavaLink'>Java</Link></NavDropdown.Item>
                <NavDropdown.Item ><Link to="/Python"    id='PythonLink'>Python</Link> </NavDropdown.Item>
               <NavDropdown.Item ><Link to="/JavaScript" id='JavaScriptLink'>JavaScript</Link></NavDropdown.Item> 
              
               <NavDropdown.Divider />
             
-            </NavDropdown>
+            {/* </NavDropdown> */}
           
             <Nav.Link  className='navlink'><Link to="/Help" id='HelpLink'>Help</Link></Nav.Link>
 
