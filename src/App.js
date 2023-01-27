@@ -56,7 +56,7 @@ function App() {
 
       <Routes>
        
-      <Route exact path="/Home" element={<Home/>}></Route>
+      <Route exact path="/" element={<Home/>}></Route>
         <Route exact path="/Help" element={<Help/>}></Route>
         <Route exact path="/About"  element={<About/>}></Route>
          <Route exact path="/Java"  element={<Java/>}></Route>
