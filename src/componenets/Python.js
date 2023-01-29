@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import './python.css'
 
@@ -113,10 +114,10 @@ function Python()
     const[showscore,setshowscore]=useState(false)
     const[mss,setmessage]=useState("")
     const[second,setsecond]=useState(60)
+    const[result,setresult]=useState("")
    
      
-    
-
+ 
 
 //this is for timing function and very important
 
@@ -127,7 +128,9 @@ function Python()
 
         if(second===0)
         {
+           
             setshowscore(true)
+           
 
 
  
@@ -141,39 +144,37 @@ function Python()
 
 //check Ans if True of False
 
+
 const event =(iscorrect)=>{
     
 
-if(iscorrect)
-    {
-     
-        setscore(score+1)
-
-    }
-     //forword next Question
-     const nextQuestion=currentQuestion+1
+    if(iscorrect)
+        {
+            setscore(score+1)
+            
     
-
-     //check if question is last question or not
- 
-     if(nextQuestion<QuestionBank.length)
-     {
-         setcurrentQuestion(nextQuestion)
-     }
-     else if(currentQuestion>=QuestionBank.length)
-     {
-        setsecond(20)
-     }
- 
-     else{
-     
-         setshowscore(true)
-         setmessage("")
-         
         }
-}
-
-
+         //forword next Question
+         const nextQuestion=currentQuestion+1
+        
+    
+         //check if question is last question or not
+     
+         if(nextQuestion<QuestionBank.length)
+         {
+             setcurrentQuestion(nextQuestion)
+         }
+     
+         else{
+         
+             setshowscore(true)
+             setmessage("")
+             setresult("")
+             
+            }
+    }
+    
+    
 
 
 //this for next button
@@ -196,6 +197,7 @@ const Raatempt=()=>
     setscore(0)
     setshowscore(false)
     setsecond(60)
+    setresult("")
     
 }
 //this for your meessage button
@@ -207,10 +209,28 @@ const messge=(score)=>
     }
    
     else{
-        setmessage("Wow Amazing!❤️")
+        setmessage("Amazing!❤️")
     }
 
 }
+
+const Result=(score)=>{
+  
+
+    if(score<=5)
+    {
+        setresult("failed❌")
+    }
+   
+    else{
+        setresult("passed✅")
+    }
+
+
+}
+
+
+
 
 
 
@@ -224,13 +244,17 @@ const messge=(score)=>
 
 
 return(
+
+        
    
         <div id="container">
+          
 
- 
         {showscore?(
             
             <div id="score">
+            
+               
                 <span id="dashbod"><u>Dashboard</u></span>
                <span >Your Marks:</span> <input type="text" disabled value={score}  id="score1"/><br /><br></br>
         
@@ -246,10 +270,17 @@ return(
                 
 
 
+                <div id='Result'>
+                <button onClick={()=>Result(score)} id="reslt">GetResult</button><span > </span>
+                <span id={result==='Fail'?"fail":"pass"}>{result}</span>
+                
+             
+             </div>
+
 
                
             <div id="todayQS">
-               <button id="btnQS">Today Questions</button><br></br><br></br>
+               <button id="btnQS">Today Quiz Questions</button><br></br><br></br>
               
                     {
                             QuestionBank.map((ans)=>(
@@ -262,12 +293,20 @@ return(
                             
                             </div>))
                     }
-            </div></div>
+            </div>
+            
+            
+            
+            
+            
+            
+            </div>
            ):
            (
 
          <>
-        <span id='qnNo'>Attempted :{currentQuestion+1}/</span>{QuestionBank.length} <span id="time"> ⏰ Time Left:{second}</span>  <br></br>  <div className='LoadQuestion'>
+        <span id='qnNo'>Attempted :{currentQuestion+1}/</span>{QuestionBank.length} <span id="time"> ⏰ Time Left:{second}</span>  <br></br> 
+         <div className='LoadQuestion'>
       
         <div>{QuestionBank[currentQuestion].Question}</div></div><br />
 
@@ -275,13 +314,17 @@ return(
                 
                 <div className='Ans'>{
                         QuestionBank[currentQuestion].Answers.map((ans)=>(
-                            <div >
+                            <div>
                                 <button id="picButton" onClick={()=>{event (ans.iscorrect)}}>{ans.answers}
                                
                                 </button><br></br><br></br>
                             </div>
                             ))}
                 </div>
+
+
+          
+
 
 
 

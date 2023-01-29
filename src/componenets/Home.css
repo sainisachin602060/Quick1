@@ -5,7 +5,9 @@ body {
 }
 
 #welcomeHeading {
-    color: rgb(62, 2, 2);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(35, 22, 158);
 }
 
 .bigConatiner {
@@ -33,9 +35,11 @@ body {
 }
 
 #testHeading {
-    color: rgb(43, 43, 43);
+    color: rgb(5, 5, 5);
+    font-family: cursive;
 }
 
 #alwaysHead {
-    color: bisque
+    color: rgb(27, 27, 27);
+    font-weight: bold;
 }

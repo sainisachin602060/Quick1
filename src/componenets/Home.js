@@ -1,28 +1,22 @@
-import React from "react";
+
 import './Home.css'
-import Marquee from "react-fast-marquee";
 
-class Home extends React.Component
+
+
+function Home()
 {
- 
-
-   
-   
-
-    start()
-    {
-        alert("First Choose Your Domain!")
-    }
-   
-    render()
-    {
   
-        
-        return(
-          
-           
+
+
+    function start()
+    {
+      alert("Select Your domain")
+
+
+    }
+    return(<div>
             <div className="bigConatiner">
-                   <Marquee value='10' id="mrq" speed={80}>❌PLEASE ANY STUDENT DO NOT TRY TO CHEATING❌</Marquee>
+                  
           
 
             <div className="HomeBody">
@@ -32,18 +26,27 @@ class Home extends React.Component
             <div id="Homeheading">
             <h1 id="welcomeHeading">Welcome To Quiz Application!</h1>
             <h2 id="alwaysHead">We Always with you...</h2><br />
-            <h3 id="testHeading">Test Your Mind!💤</h3>
+            <h3 id="testHeading">Test Mind Just in Minutes💤</h3>
          
-            <button id="btn" onClick={()=>this.start()}>Getted Start</button>
+            <button id="btn" onClick={()=>start()}>Getted Start</button>
+     
+            
+
             </div>
         </div>
+        
              
             </div>
             </div>
-          
-        )
-    }
+        
+    </div>)
+    
 }
 
+export default  Home; 
 
-export default Home;
+   
+   
+
+ 
+  

@@ -23,13 +23,13 @@ h1 {
 #container {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(222, 232, 136);
+    background-color: rgb(104, 115, 5);
 }
 
 .LoadQs {
     text-align: center;
     font-size: 22px;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
     background-color: rgb(1, 40, 56);
 }

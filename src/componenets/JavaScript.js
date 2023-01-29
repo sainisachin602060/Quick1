@@ -4,7 +4,6 @@ import './javascript.css'
 
 
 
-
 function JavaScript()
 {
     
@@ -118,6 +117,7 @@ function JavaScript()
     const[showscore,setshowscore]=useState(false)
     const[mss,setmessage]=useState("")
     const[second,setsecond]=useState(60)
+    const[result,setresult]=useState("")
   
    
      
@@ -176,6 +176,7 @@ const event =(iscorrect)=>{
          
              setshowscore(true)
              setmessage("")
+             setresult("")
              
             }
     }
@@ -205,6 +206,7 @@ const Raatempt=()=>
     setscore(0)
     setshowscore(false)
     setsecond(25)
+    setresult("")
     
 }
 //this for your meessage button
@@ -221,6 +223,23 @@ const messge=(score)=>
     else{
         setmessage("Wow Amazing!❤️")
     }
+
+}
+
+
+
+const Result=(score)=>{
+  
+
+    if(score<=5)
+    {
+        setresult("failed❌")
+    }
+   
+    else{
+        setresult("passed✅")
+    }
+
 
 }
 
@@ -255,12 +274,16 @@ return(
                 <button  id="Attempt_Again" onClick={()=>Raatempt()}>Attempt Again</button>
                 <h1 id="ms">{mss}</h1>
                 
+                <div id='Result'>
+                <button onClick={()=>Result(score)} id="reslt">GetResult</button><span > </span>
+                <span id={result==='Fail'?"fail":"pass"}>{result}</span>
+                </div>
 
 
 
                
             <div id="todayQS">
-               <button id="btnQS">Today Questions</button><br></br><br></br>
+               <button id="btnQS">Today Quiz Questions</button><br></br><br></br>
               
                     {
                             QuestionBank.map((ans)=>(

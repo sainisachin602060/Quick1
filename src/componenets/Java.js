@@ -5,6 +5,7 @@ import './java.css'
 
 
 
+
 function Java()
 {
     
@@ -25,7 +26,7 @@ function Java()
             Answers:[
                 {answers:"Guido van rausan",iscorrect:true,id:1 },
                 {answers:"satya nadela",iscorrect:false,id:2 },
-                {answers:"James Goslinge",iscorrect:false,id:3 },
+                {answers:"James Goslling",iscorrect:false,id:3 },
                 {answers:"van sao rai",iscorrect:false,id:4}
             ]
         },
@@ -118,6 +119,7 @@ function Java()
     const[showscore,setshowscore]=useState(false)
     const[mss,setmessage]=useState("")
     const[second,setsecond]=useState(60)
+    const[result,setresult]=useState("")
    
      
     
@@ -171,6 +173,7 @@ if(iscorrect)
      
          setshowscore(true)
          setmessage("")
+         setresult("")
          
         }
 }
@@ -197,6 +200,7 @@ const Raatempt=()=>
     setscore(0)
     setshowscore(false)
     setsecond(25)
+    setresult("")
     
 }
 //this for your meessage button
@@ -212,6 +216,23 @@ const messge=(score)=>
     }
 
 }
+
+
+const Result=(score)=>{
+  
+
+    if(score<=5)
+    {
+        setresult("failed❌")
+    }
+   
+    else{
+        setresult("passed✅")
+    }
+
+
+}
+
 
 
 
@@ -245,11 +266,16 @@ return(
                 <h1 id="ms">{mss}</h1>
                 
 
+                <div id='Result'>
+                <button onClick={()=>Result(score)} id="reslt">GetResult</button><span > </span>
+                <span id={result==='Fail'?"fail":"pass"}>{result}</span>
+                </div>
+
 
 
                
             <div id="todayQS">
-               <button id="btnQS">Today Questions</button><br></br><br></br>
+               <button id="btnQS">Today Quiz Questions</button><br></br><br></br>
               
                     {
                             QuestionBank.map((ans)=>(

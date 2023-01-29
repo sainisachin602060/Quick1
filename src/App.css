@@ -51,12 +51,29 @@
 
 #JavaLink {
     color: rgb(24, 22, 22);
+    margin-top: 10px;
 }
 
 #PythonLink {
     color: rgb(15, 14, 14);
+    margin-top: 10px;
 }
 
 #JavaScriptLink {
     color: rgb(26, 25, 25);
+    margin-top: 10px;
+}
+
+#Html {
+    color: rgb(26, 25, 25);
+    margin-top: 10px;
+}
+
+#Css {
+    color: rgb(26, 25, 25);
+    margin-top: 10px;
+}
+
+#startbtn {
+    margin-left: 200px;
 }
